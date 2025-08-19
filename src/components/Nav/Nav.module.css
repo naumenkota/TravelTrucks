@@ -1,0 +1,22 @@
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 32px;
+    height: 24px;     
+}
+
+.navLink {
+    font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+        color: #101828;
+
+}
+
+
+.active{
+color: #d84343;
+}
