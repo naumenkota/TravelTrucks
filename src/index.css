@@ -1,14 +1,8 @@
 :root {
   font-family: "Inter", sans-serif;
-  
-  color-scheme: light dark;
   color: #101828;
   background-color: #FFFFFF;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
