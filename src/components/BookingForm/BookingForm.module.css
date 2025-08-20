@@ -1,2 +1,28 @@
+.input {
+    width: 527px;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 12px;
+    background-color: #f7f7f7;
+    color: #101028;
+    resize: none;
+    
+}
 
+.calendar {
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.day {
+    border-radius: 50%;
+    font-size: 14px;
+    
+}
+
+.day:hover {
+    border-radius: 50%;
+    background-color: rgba(16, 24, 40, 0.1);
+   
+}
 
