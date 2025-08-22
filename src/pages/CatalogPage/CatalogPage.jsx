@@ -2,6 +2,7 @@ import FilterPanel from "../../components/FilterPanel/FilterPanel.jsx";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchCampers } from "../../redux/api/api.js";
+import Button from "../../components/Button/Button.jsx";
 
 export default function CatalogPage() {
   const dispatch = useDispatch();
@@ -11,8 +12,8 @@ export default function CatalogPage() {
   }, [dispatch]);
 
   return (
-    <>
+    <div>
       <FilterPanel />
-    </>
+    </div>
   );
 }
