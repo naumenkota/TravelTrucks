@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchCampers } from "../../redux/api/api.js";
 import VehicleEquipment from "../../components/VehicleEquipment/VehicleEquipment.jsx";
+import VehicleType from "../../components/VehicleType/VehicleType.jsx";
 
 export default function CatalogPage() {
   const dispatch = useDispatch();
@@ -15,6 +16,7 @@ export default function CatalogPage() {
     <>
       <LocationFilter />
       <VehicleEquipment />
+      <VehicleType />
     </>
   );
 }
