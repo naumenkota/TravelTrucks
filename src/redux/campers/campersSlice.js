@@ -27,7 +27,7 @@ const campersSlice = createSlice({
         /*  state.items = [...state.items, ...action.payload.items]; */
         state.total = action.payload.total;
         state.loading = false;
-        state.page = action.meta.arg.page;
+        /* state.page = action.meta.arg.page;
         /* state.page = action.meta.arg?.page || 1; */
       })
       .addCase(fetchCampers.pending, (state) => {

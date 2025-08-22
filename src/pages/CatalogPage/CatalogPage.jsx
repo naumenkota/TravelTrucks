@@ -13,6 +13,7 @@ export default function CatalogPage() {
 
   return (
     <>
+      <LocationFilter />
       <VehicleEquipment />
     </>
   );
