@@ -1,6 +1,6 @@
 import { selectForm } from "../../redux/filter/selector.js";
 import { changeFilter } from "../../redux/filter/filterSlice.js";
-import Divider from "../../assets/divider.svg?react";
+import Line from "../Line/Line.jsx";
 import { useSelector, useDispatch } from "react-redux";
 import s from "./VehicleType.module.css";
 import vehicleOptions from "../../constants/vehicleOptions.js";
@@ -16,7 +16,7 @@ export default function VehicleType() {
   return (
     <div className={s.wrapper}>
       <h2 className={s.title}>Vehicle Type</h2>
-      <Divider />
+      <Line />
       <div className={s.iconsWrapper}>
         {vehicleOptions.map(({ key, label, icon: Icon }) => (
           <button

@@ -3,7 +3,7 @@ import { changeFilter } from "../../redux/filter/filterSlice.js";
 import { selectFilter } from "../../redux/filter/selector.js";
 import s from "./VehicleEquipment.module.css";
 import equipmentOptions from "../../constants/equipmentOptions.js";
-import Divider from "../../assets/divider.svg?react";
+import Line from "../Line/Line.jsx";
 
 export default function VehicleEquipment() {
   const dispatch = useDispatch();
@@ -32,7 +32,7 @@ export default function VehicleEquipment() {
   return (
     <div className={s.wrapper}>
       <h2 className={s.title}>Vehicle equipment</h2>
-      <Divider />
+      <Line />
       <div className={s.iconsWrapper}>
         {equipmentOptions.map((option) => {
           const Icon = option.icon;
