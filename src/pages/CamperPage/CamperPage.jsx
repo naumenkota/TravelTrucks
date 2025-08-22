@@ -8,7 +8,8 @@ import {
   selectCampersLoading,
   selectCampersError,
 } from "../../redux/campers/selector.js";
-import CamperFeatures from "../../components/CamperFeatures/CamperFeatures";
+import CamperFeatures from "../../components/CamperFeatures/CamperFeatures.jsx";
+import CamperReviews from "../../components/CamperReviews/CamperReviews.jsx";
 
 export default function CamperPage() {
   const { camperId } = useParams();
@@ -29,7 +30,7 @@ export default function CamperPage() {
 
   return (
     <>
-      <CamperFeatures camper={selectedCamper} />
+      <CamperReviews camper={selectedCamper} />
     </>
   );
 }
