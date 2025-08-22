@@ -12,6 +12,7 @@ const initialState = {
   microwave: false,
   gas: false,
   water: false,
+  transmission: null,
 };
 
 const filterSlice = createSlice({

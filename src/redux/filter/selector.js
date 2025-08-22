@@ -1,7 +1,8 @@
 export const selectLocation = (state) => state.filter.location;
 
-// кузов
-//export const selectForm = (state) => state.filter.form;
+export const selectForm = (state) => state.filter.form;
+
+export const selectFilter = (state) => state.filter;
 
 // обладнання
 /*export const selectAC = (state) => state.filter.AC;

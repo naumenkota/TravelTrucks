@@ -2,6 +2,7 @@ import LocationFilter from "../../components/LocationFilter/LocationFilter.jsx";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchCampers } from "../../redux/api/api.js";
+import VehicleEquipment from "../../components/VehicleEquipment/VehicleEquipment.jsx";
 
 export default function CatalogPage() {
   const dispatch = useDispatch();
@@ -12,7 +13,7 @@ export default function CatalogPage() {
 
   return (
     <>
-      <LocationFilter />
+      <VehicleEquipment />
     </>
   );
 }

@@ -1,0 +1,44 @@
+.wrapper{
+    display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 32px;
+        width: 360px;
+}
+
+.title{
+    font-weight: 600;
+        font-size: 20px;
+        line-height: 1.2;
+        
+}
+
+.iconsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    row-gap: 8px;
+}
+
+.iconButton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #dadde1;
+    border-radius: 12px;
+    padding: 16px 40px;
+    width: 112px;
+    height: 96px;
+    background-color: #fff;
+}
+
+.iconButton svg {
+    width: 32px;
+    height: 32px;
+}
+
+.selected{
+    border: 1px solid #e44848;
+}
