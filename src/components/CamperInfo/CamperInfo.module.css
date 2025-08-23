@@ -1,0 +1,62 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-bottom: 60px;
+}
+
+.name{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33;
+    margin-bottom: 8px;
+}
+
+.rateLoc{
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.ratingBlock,
+.locationBlock{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.ratingBlock svg,
+.locationBlock svg {
+    width: 16px;
+    height: 16px;
+}
+
+.price{
+font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33;
+}
+
+
+.images{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+
+}
+
+.image {
+border-radius: 10px;
+    width: 292px;
+    height: 312px;
+    object-fit: cover;
+    display: block;
+}
+
+.desc{
+font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #475467;
+}

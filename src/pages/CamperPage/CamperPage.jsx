@@ -1,4 +1,4 @@
-import BookingForm from "../../components/BookingForm/BookingForm.jsx";
+import CamperDetails from "../../components/CamperDetails/CamperDetails.jsx";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
@@ -8,8 +8,6 @@ import {
   selectCampersLoading,
   selectCampersError,
 } from "../../redux/campers/selector.js";
-import CamperFeatures from "../../components/CamperFeatures/CamperFeatures.jsx";
-import CamperReviews from "../../components/CamperReviews/CamperReviews.jsx";
 
 export default function CamperPage() {
   const { camperId } = useParams();
@@ -30,7 +28,7 @@ export default function CamperPage() {
 
   return (
     <>
-      <CamperReviews camper={selectedCamper} />
+      <CamperDetails camper={selectedCamper} />
     </>
   );
 }
