@@ -1,0 +1,110 @@
+.camperItem{
+    display: flex;
+        gap: 24px;
+      
+}
+
+.image{
+    width: 292px;
+        height: 320px;
+        border-radius: 10px;
+        object-fit: cover;
+}
+
+.info{
+ display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.wrapperInfo{
+    width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+}
+
+.topInfo{
+    display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+}
+
+.name {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33;
+    
+}
+
+
+.wrapperToggle{
+display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.price {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33;
+}
+
+.rateLoc {
+    display: flex;
+    gap: 16px;
+    
+}
+
+.ratingBlock,
+.locationBlock {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.ratingBlock svg,
+.locationBlock svg {
+    width: 16px;
+    height: 16px;
+}
+
+.desc{
+    width: 525px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #475467;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-radius: 100px;
+    font-weight: 500;
+    background-color: #F2F4F7;
+}
+
+
+.showMore{
+    font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: -0.01em;
+        white-space: nowrap;
+}

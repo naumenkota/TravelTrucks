@@ -1,4 +1,5 @@
 import CamperDetails from "../../components/CamperDetails/CamperDetails.jsx";
+import Container from "../../components/Container/Container.jsx";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
@@ -28,7 +29,9 @@ export default function CamperPage() {
 
   return (
     <>
-      <CamperDetails camper={selectedCamper} />
+      <Container>
+        <CamperDetails camper={selectedCamper} />
+      </Container>
     </>
   );
 }
