@@ -10,7 +10,7 @@ import {
 } from "../../redux/campers/selector.js";
 import { fetchCampers } from "../../redux/api/api";
 
-export default function CampersList({ campers }) {
+export default function CampersList({ campers = [] }) {
   const dispatch = useDispatch();
   const loadingMore = useSelector(selectCampersLoadingMore);
   const total = useSelector(selectCampersTotal);
@@ -21,18 +21,20 @@ export default function CampersList({ campers }) {
     dispatch(fetchCampers({ page: page + 1, perPage }));
   };
 
-  console.log("CampersList campers:", campers);
   return (
     <div className={s.wrapper}>
-      <ul className={s.list}>
-        {campers.map((camper) => (
-          <li key={camper.id} className={s.item}>
-            <CamperItem camper={camper} />
-          </li>
-        ))}
-      </ul>
-
-      {campers.length < total && !loadingMore && (
+      {!campers || campers.length === 0 ? (
+        <p>Nothing found. Try something else.</p>
+      ) : (
+        <ul className={s.list}>
+          {campers.map((camper) => (
+            <li key={camper.id} className={s.item}>
+              <CamperItem camper={camper} />
+            </li>
+          ))}
+        </ul>
+      )}
+      {campers.length > 0 && campers.length < total && !loadingMore && (
         <div className={s.moreWrapper}>
           <Button load={true} onClick={handleLoadMore}>
             Load more

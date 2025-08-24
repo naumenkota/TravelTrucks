@@ -6,7 +6,7 @@ import vehicleOptions from "../../constants/vehicleOptions";
 export default function CamperFeatures({ camper }) {
   const getForm = (form) => {
     const option = vehicleOptions.find((option) => option.key === form);
-    return option ? option.label : form;
+    return option ? option.value : form;
   };
 
   return (

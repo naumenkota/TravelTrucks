@@ -3,16 +3,11 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   location: "",
   form: "",
-  AC: false,
-  bathroom: false,
-  kitchen: false,
-  TV: false,
-  radio: false,
-  refrigerator: false,
-  microwave: false,
-  gas: false,
-  water: false,
-  transmission: null,
+  AC: "",
+  bathroom: "",
+  kitchen: "",
+  TV: "",
+  transmission: "",
 };
 
 const filterSlice = createSlice({

@@ -1,4 +1,4 @@
-import { selectForm } from "../../redux/filter/selector.js";
+import { selectFilter } from "../../redux/filter/selector.js";
 import { changeFilter } from "../../redux/filter/filterSlice.js";
 import Line from "../Line/Line.jsx";
 import { useSelector, useDispatch } from "react-redux";
@@ -7,7 +7,8 @@ import vehicleOptions from "../../constants/vehicleOptions.js";
 
 export default function VehicleType() {
   const dispatch = useDispatch();
-  const selectedForm = useSelector(selectForm);
+  const filters = useSelector(selectFilter);
+  const selectedForm = filters.form;
 
   const handleSelect = (type) => {
     dispatch(changeFilter({ filter: "form", value: type }));
@@ -18,9 +19,10 @@ export default function VehicleType() {
       <h2 className={s.title}>Vehicle Type</h2>
       <Line />
       <div className={s.iconsWrapper}>
-        {vehicleOptions.map(({ key, label, icon: Icon }) => (
+        {vehicleOptions.map(({ key, label, value, icon: Icon }) => (
           <button
             key={key}
+            value={value}
             type="button"
             className={`${s.iconButton}  ${
               selectedForm === label ? s.selected : ""
@@ -28,7 +30,7 @@ export default function VehicleType() {
             onClick={() => handleSelect(label)}
           >
             <Icon />
-            <span>{label}</span>
+            <span>{value}</span>
           </button>
         ))}
       </div>
