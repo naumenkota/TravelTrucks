@@ -1,14 +1,17 @@
 import FavoriteToggle from "../FavoriteToggle/FavoriteToggle";
 import s from "./CamperItem.module.css";
 import YellowStar from "../../assets/YellowStar.svg?react";
-
 import MapIcon from "../../assets/Map.svg?react";
 import Button from "../Button/Button.jsx";
 import camperOptions from "../../constants/camperOptions.js";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleFavorite } from "../../redux/favorite/favoritesSlice.js";
 
 export default function CamperItem({ camper }) {
   const loc = camper.location.split(", ").reverse().join(", ");
+  const favorites = useSelector((state) => state.favorites.items);
+  const dispatch = useDispatch();
 
   return (
     <div className={s.camperItem}>
@@ -26,7 +29,10 @@ export default function CamperItem({ camper }) {
               <div className={s.wrapperToggle}>
                 <p className={s.price}> €{camper.price}.00</p>
 
-                <FavoriteToggle />
+                <FavoriteToggle
+                  isFavorite={favorites.includes(camper.id)}
+                  onChange={() => dispatch(toggleFavorite(camper.id))}
+                />
               </div>
             </div>
 
