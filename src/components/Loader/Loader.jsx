@@ -1,14 +1,11 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+import s from "./Loader.module.css";
 
 export default function Loader() {
   return (
-    <div
-      className="d-flex justify-content-center align-items-center"
-      style={{ minHeight: "100vh" }}
-    >
-      <div className="spinner-border text-primary" role="status">
-        <span className="visually-hidden">Loading...</span>
-      </div>
+    <div className={s.loader}>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   );
 }
