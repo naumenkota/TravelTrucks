@@ -25,6 +25,7 @@ export default function CamperItem({ camper }) {
 
               <div className={s.wrapperToggle}>
                 <p className={s.price}> €{camper.price}.00</p>
+
                 <FavoriteToggle />
               </div>
             </div>

@@ -1,54 +1,60 @@
 .camperItem{
     display: flex;
-        gap: 24px;
+    gap: 24px;
       
 }
 
 .image{
     width: 292px;
-        height: 320px;
-        border-radius: 10px;
-        object-fit: cover;
+    height: 320px;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 .info{
- display: flex;
+    display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
 .wrapperInfo{
     width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
         
 }
 
 .topInfo{
     display: flex;
-        justify-content: space-between;
-        margin-bottom: 8px;
+    justify-content: space-between;
+    margin-bottom: 8px;
 }
 
 .name {
     font-weight: 600;
     font-size: 24px;
     line-height: 1.33;
-    
+    margin: 0;
 }
 
 
 .wrapperToggle{
-display: flex;
+    display: flex;
     gap: 12px;
     align-items: center;
+    height: 32px;
+   
 }
+
 
 .price {
     font-weight: 600;
     font-size: 24px;
     line-height: 1.33;
+    display: flex;
+    align-items: center; 
+    margin: 0;
 }
 
 .rateLoc {
@@ -73,13 +79,13 @@ display: flex;
 
 .desc{
     width: 525px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-weight: 400;
-            font-size: 16px;
-            line-height: 1.5;
-            color: #475467;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #475467;
 }
 
 .features {
@@ -103,10 +109,10 @@ display: flex;
 
 .showMore{
     font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: -0.01em;
-        white-space: nowrap;
-        color: white;
-        text-decoration: none;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    color: white;
+    text-decoration: none;
 }
