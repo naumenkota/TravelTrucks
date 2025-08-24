@@ -9,14 +9,14 @@
 
 .navLink {
     font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
-        text-align: center;
-        color: #101828;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: #101828;
 
 }
 
 
 .active{
-color: #d84343;
+    color: #d84343;
 }

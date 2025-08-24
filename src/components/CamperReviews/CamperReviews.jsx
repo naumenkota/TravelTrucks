@@ -1,5 +1,4 @@
 import s from "./CamperReviews.module.css";
-
 import YellowStar from "../../assets/YellowStar.svg?react";
 import WhiteStar from "../../assets/WhiteStar.svg?react";
 

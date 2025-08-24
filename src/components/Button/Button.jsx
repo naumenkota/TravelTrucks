@@ -4,6 +4,7 @@ import s from "./Button.module.css";
 export default function Button({
   children,
   onClick,
+  className,
   load = false,
   type = "button",
   ...props
@@ -11,7 +12,7 @@ export default function Button({
   return (
     <button
       onClick={onClick}
-      className={clsx(s.btn, load && s.btnLoad)}
+      className={clsx(s.btn, load && s.btnLoad, className)}
       type={type}
       {...props}
     >

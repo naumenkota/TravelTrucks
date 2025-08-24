@@ -20,17 +20,6 @@ export default function BookingForm() {
     comment: Yup.string().max(300, "Too Long!"),
   });
 
-  const onSubmit = (values, actions) => {
-    /*   const newBooking = {
-            name: values.name,
-            email: values.email,
-            date: values.date,
-            comment: values.comment
-        };  */
-
-    actions.resetForm();
-  };
-
   return (
     <div className={s.container}>
       <h2 className={s.title}>Book your campervan now</h2>
@@ -43,8 +32,7 @@ export default function BookingForm() {
           date: null,
           comment: "",
         }}
-        onSubmit={onSubmit}
-        validationSchema={BookingValidationSchema}
+       validationSchema={BookingValidationSchema}
       >
         {({ values, setFieldValue, setFieldTouched, errors, touched }) => (
           <Form className={s.form}>

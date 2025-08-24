@@ -64,10 +64,11 @@ export default function CamperItem({ camper }) {
               ) : null
             )}
           </div>
-          <Button>
-            <Link to={`/catalog/${camper.id}`} className={s.showMore}>
-              Show more
-            </Link>
+          <Button
+            className={s.showMore}
+            onClick={() => window.open(`/catalog/${camper.id}`, "_blank")}
+          >
+            Show more
           </Button>
         </div>
       </div>

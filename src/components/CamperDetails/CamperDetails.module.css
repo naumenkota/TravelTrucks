@@ -17,8 +17,6 @@
     gap: 40px;
 }
 
-
-
 .tab {
     font-weight: 600;
     font-size: 20px;
@@ -31,14 +29,12 @@
 }
 
 .tabActive::after {
-  
     content: "";
     position: absolute;
     bottom: -24px;
     left: 0;
     width: 80px;
-   
-    height: 2px;
+    height: 4px;
     background-color: #e44848;
     z-index: 1;
 }
@@ -47,17 +43,15 @@
     position: absolute;
     bottom: -24px;
     left: 0;
-   height: 1px;
-        background-color: #dadde1;
-        width: 100%;
-        z-index: 0;
+    height: 1px;
+    background-color: #dadde1;
+    width: 100%;
+    z-index: 0;
    
 }
 
 .content{
     display: flex;
-   
-        gap: 40px;
-       
-        align-items: flex-start;
+    gap: 40px;
+    align-items: flex-start;
 }

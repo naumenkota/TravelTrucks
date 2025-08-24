@@ -35,6 +35,9 @@ export default function CamperFeatures({ camper }) {
             <p>Width:</p> <p>{camper.width}</p>
           </li>
           <li className={s.detailItem}>
+            <p>Height:</p> <p>{camper.height}</p>
+          </li>
+          <li className={s.detailItem}>
             <p>Tank:</p> <p>{camper.tank}</p>
           </li>
           <li className={s.detailItem}>
