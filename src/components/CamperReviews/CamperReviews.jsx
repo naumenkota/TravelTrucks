@@ -1,6 +1,7 @@
 import s from "./CamperReviews.module.css";
-import YellowStar from "../../assets/yellowstar.svg?react";
+
 import WhiteStar from "../../assets/whitestar.svg?react";
+import YellowStar from "../../assets/YellowStar.svg?react";
 
 export default function CamperReviews({ camper }) {
   const reviews = camper.reviews;
