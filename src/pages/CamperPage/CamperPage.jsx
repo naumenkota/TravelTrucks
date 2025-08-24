@@ -16,6 +16,7 @@ export default function CamperPage() {
   const selectedCamper = useSelector(selectSelectedCamper);
   const loading = useSelector(selectCampersLoading);
   const error = useSelector(selectCampersError);
+  
 
   useEffect(() => {
     if (camperId) {

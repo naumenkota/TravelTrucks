@@ -19,7 +19,7 @@ export default function CatalogPage() {
   const error = useSelector(selectCampersError);
 
   useEffect(() => {
-    dispatch(fetchCampers());
+    dispatch(fetchCampers({ page: 1, perPage: 4 }));
   }, [dispatch]);
 
   if (loading) return <p>Loading campers...</p>;

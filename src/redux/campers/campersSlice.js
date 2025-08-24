@@ -5,6 +5,7 @@ const initialState = {
   items: [],
   total: 0,
   loading: false,
+  loadingMore: false,
   error: null,
   page: 1,
   perPage: 4,
@@ -18,27 +19,37 @@ const campersSlice = createSlice({
     resetCampers(state) {
       state.items = [];
       state.total = 0;
-      state.page = 1;
+      (state.loading = false), (state.loadingMore = false), (state.page = 1);
     },
   },
   extraReducers: (builder) => {
     builder
       .addCase(fetchCampers.fulfilled, (state, action) => {
-        state.items = action.payload.items;
-        /*  state.items = [...state.items, ...action.payload.items]; */
+        if (action.meta.arg.page > 1) {
+          state.items = [...state.items, ...action.payload.items];
+          state.loadingMore = false;
+        } else {
+          state.items = action.payload.items;
+          state.loading = false;
+        }
         state.total = action.payload.total;
-        state.loading = false;
-        /* state.page = action.meta.arg.page;
-        /* state.page = action.meta.arg?.page || 1; */
+
+        state.page = action.meta.arg.page;
       })
-      .addCase(fetchCampers.pending, (state) => {
+      .addCase(fetchCampers.pending, (state, action) => {
         state.error = null;
-        state.loading = true;
+        if (action.meta.arg.page > 1) {
+          state.loadingMore = true;
+        } else {
+          state.loading = true;
+        }
       })
       .addCase(fetchCampers.rejected, (state, action) => {
         state.error = action.payload;
         state.loading = false;
+        state.loadingMore = false;
       })
+
       .addCase(fetchCamperById.fulfilled, (state, action) => {
         state.selectedCamper = action.payload;
         state.loading = false;
@@ -50,6 +61,7 @@ const campersSlice = createSlice({
       .addCase(fetchCamperById.rejected, (state, action) => {
         state.error = action.payload;
         state.loading = false;
+        state.loadingMore = false;
       });
   },
 });

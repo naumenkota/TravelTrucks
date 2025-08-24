@@ -3,7 +3,6 @@ import VehicleEquipment from "../VehicleEquipment/VehicleEquipment.jsx";
 import VehicleType from "../VehicleType/VehicleType.jsx";
 import Button from "../Button/Button.jsx";
 import s from "./FilterPanel.module.css";
-import Container from "../Container/Container.jsx";
 import { useSelector } from "react-redux";
 import { selectFilter } from "../../redux/filter/selector.js";
 
@@ -15,15 +14,13 @@ export default function FilterPanel() {
 
   return (
     <div>
-      <Container>
-        <LocationFilter />
-        <h3 className={s.title}>Filters</h3>
+      <LocationFilter />
+      <h3 className={s.title}>Filters</h3>
 
-        <VehicleEquipment />
-        <VehicleType />
+      <VehicleEquipment />
+      <VehicleType />
 
-        <Button onClick={handleSearch}>Search</Button>
-      </Container>
+      <Button onClick={handleSearch}>Search</Button>
     </div>
   );
 }
