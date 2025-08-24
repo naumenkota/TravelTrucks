@@ -13,7 +13,7 @@ export default function CamperDetails({ camper }) {
 
   return (
     <div className={s.section}>
-      <CamperInfo camper={camper} />
+      <CamperInfo camper={camper} goToTab={setActive} />
 
       <div className={s.wrapper}>
         <div className={s.header}>
@@ -29,8 +29,9 @@ export default function CamperDetails({ camper }) {
 
         <div className={s.content}>
           {active === "Features" && <CamperFeatures camper={camper} />}
-          {active === "Reviews" && <CamperReviews camper={camper} />}
-
+          <div id="reviews">
+            {active === "Reviews" && <CamperReviews camper={camper} />}
+          </div>
           <BookingForm />
         </div>
       </div>

@@ -18,12 +18,19 @@
     margin-bottom: 16px;
 }
 
+.rating{
+    border-bottom: 1px solid black;
+    padding-bottom: 2px;
+    cursor: pointer;
+}
+
 .ratingBlock,
 .locationBlock{
     display: flex;
     gap: 4px;
     align-items: center;
     justify-content: center;
+    
 }
 
 .ratingBlock svg,

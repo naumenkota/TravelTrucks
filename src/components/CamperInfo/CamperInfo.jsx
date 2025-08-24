@@ -2,8 +2,17 @@ import s from "./CamperInfo.module.css";
 import YellowStar from "../../assets/YellowStar.svg?react";
 import MapIcon from "../../assets/Map.svg?react";
 
-export default function CamperInfo({ camper }) {
+export default function CamperInfo({ camper, goToTab }) {
   const loc = camper.location.split(", ").reverse().join(", ");
+
+  const handleReviewsClick = () => {
+    goToTab("Reviews");
+    setTimeout(() => {
+      document
+        .getElementById("reviews")
+        ?.scrollIntoView({ behavior: "smooth" });
+    }, 50);
+  };
 
   return (
     <div className={s.wrapper}>
@@ -13,8 +22,12 @@ export default function CamperInfo({ camper }) {
         <div className={s.rateLoc}>
           <div className={s.ratingBlock}>
             <YellowStar />
-            <span className={s.rating}>{camper.rating}</span>
-            <span className={s.reviews}>({camper.reviews.length} Reviews)</span>
+            <div className={s.rating}>
+              <span onClick={handleReviewsClick}>{camper.rating}</span>
+              <span onClick={handleReviewsClick}>
+                ({camper.reviews.length} Reviews)
+              </span>
+            </div>
           </div>
 
           <div className={s.locationBlock}>
