@@ -1,6 +1,6 @@
 import FavoriteToggle from "../FavoriteToggle/FavoriteToggle";
 import s from "./CamperItem.module.css";
-import YellowStar from "./../assets/yellowstar.svg?react";
+import YellowStar from "../../assets/yellowstar.svg?react";
 import MapIcon from "../../assets/Map.svg?react";
 import Button from "../Button/Button.jsx";
 import camperOptions from "../../constants/camperOptions.js";
