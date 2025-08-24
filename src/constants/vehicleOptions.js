@@ -1,6 +1,6 @@
-import VanIcon from "../assets/van.svg?react";
 import FullyIcon from "../assets/fullyintegrated.svg?react";
 import AlcoveIcon from "../assets/alcove.svg?react";
+import VanIcon from "../assets/Van.svg?react";
 
 const vehicleOptions = [
   { key: "panelTruck", label: "panelTruck", value: "Van", icon: VanIcon },
