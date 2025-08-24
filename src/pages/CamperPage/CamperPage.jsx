@@ -9,6 +9,7 @@ import {
   selectCampersLoading,
   selectCampersError,
 } from "../../redux/campers/selector.js";
+import Loader from "../../components/Loader/Loader.jsx";
 
 export default function CamperPage() {
   const { camperId } = useParams();
@@ -16,7 +17,6 @@ export default function CamperPage() {
   const selectedCamper = useSelector(selectSelectedCamper);
   const loading = useSelector(selectCampersLoading);
   const error = useSelector(selectCampersError);
-  
 
   useEffect(() => {
     if (camperId) {
@@ -24,7 +24,7 @@ export default function CamperPage() {
     }
   }, [dispatch, camperId]);
 
-  if (loading) return <p>Loading camper...</p>;
+  if (loading) return <Loader />;
   if (error) return <p>Error: {error}</p>;
   if (!selectedCamper) return <p>Camper not found</p>;
 

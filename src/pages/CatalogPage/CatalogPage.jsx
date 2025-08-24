@@ -11,6 +11,7 @@ import {
   selectCampersError,
 } from "../../redux/campers/selector.js";
 import s from "./CatalogPage.module.css";
+import Loader from "../../components/Loader/Loader.jsx";
 
 export default function CatalogPage() {
   const dispatch = useDispatch();
@@ -22,7 +23,7 @@ export default function CatalogPage() {
     dispatch(fetchCampers({ page: 1, perPage: 4 }));
   }, [dispatch]);
 
-  if (loading) return <p>Loading campers...</p>;
+  if (loading) return <Loader />;
   if (error) return <p>Error: {error}</p>;
 
   return (
